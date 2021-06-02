@@ -52,6 +52,6 @@ const styles = StyleSheet.create({
         fontFamily:FONT_FAMILY_REGULAR,
         color:'#A1A5AA'
     },
-}),
+});
 
 export default Cabecalho;

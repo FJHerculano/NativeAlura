@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor:COR_DE_FUNDO,
     },
-}),
+});
 
 export default App;
