@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import {
     FONT_FAMILY_SEMI_BOLD,
     FONT_SIZE_SMALL,
     WHITE,
 } from '../../../../styles/styles';
-import { useNavigation } from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/native';
 
 export const Item = ({imagem, titulo, estudio, itemDesc, itemName, preco, id}) => {
     const navigation = useNavigation();

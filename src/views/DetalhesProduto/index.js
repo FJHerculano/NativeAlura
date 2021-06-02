@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Background from './components/Background';
-import DescricaoItem from './components/DescricaoItem';
+import {Background} from './components/Background';
+import {DescricaoItem} from './components/DescricaoItem';
 
 export const DetalhesProduto = ({route}) => {
     const {imagem, estudio, itemDesc, itemName, titulo, preco, id} = route.params;

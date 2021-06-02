@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
     },
-    imagem:{width: 30, height:72},
+    
     textSuperior:{
         fontFamily: FONT_FAMILY_BOLD,
         fontSize: FONT_SIZE_MEDIUM,
