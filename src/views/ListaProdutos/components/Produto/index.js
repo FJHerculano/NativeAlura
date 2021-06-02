@@ -1,6 +1,11 @@
-import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+    FONT_FAMILY_SEMI_BOLD,
+    FONT_SIZE_SMALL,
+    WHITE,
+} from '../../../../styles/styles';
+import { useNavigation } from '@react-navigation/core';
 
 export const Item = ({imagem, titulo, estudio, itemDesc, itemName, preco, id}) => {
     const navigation = useNavigation();
@@ -25,7 +30,7 @@ export const Item = ({imagem, titulo, estudio, itemDesc, itemName, preco, id}) =
 const styles = StyleSheet.create({
     containerItem:{
         height: 168,
-        backgroundColor: '#fff',
+        backgroundColor: WHITE,
         borderRadius:10,
         flex:1,
         justifyContent:'center',
@@ -34,8 +39,8 @@ const styles = StyleSheet.create({
     },
     texto:{
         marginTop:8,
-        fontFamily: 'OpenSans-SemiBold',
-        fontSize:14,
+        fontFamily: FONT_FAMILY_SEMI_BOLD,
+        fontSize: FONT_SIZE_SMALL,
         color:'#848486',
     },
     imagem:{

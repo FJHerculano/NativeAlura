@@ -26,8 +26,8 @@ const App = () => {
                 </Stack.Navigator>
             </SafeAreaView>
         </NavigationContainer>
-    )
-}
+    );
+};
  
 const styles = StyleSheet.create({
     container:{

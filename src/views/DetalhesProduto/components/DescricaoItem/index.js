@@ -13,6 +13,8 @@ import {
   LIGHTERGRAY,
   LIGHTGRAY,
 } from '../../../../styles/styles';
+import { formataValor } from '../../../../utils/utils';
+import { Botao } from '../../../../components/botao';
 
 export const DescricaoItem = ({
     imagem, 
@@ -28,12 +30,20 @@ export const DescricaoItem = ({
         <View style={styles.itemContainer}>
             <View style={styles.itemPosicao}>
                 <View style={styles.item}>
-                    <View style={styles.textoPosicao}>
+                    <View style={styles.headerPosicao}>
                         <View>
                             <Text style={styles.textSuperior}>{estudio}</Text>
                             <Text style={styles.textMedio}>{itemName}</Text>
                             <Text style={styles.textInferior}>{titulo}</Text>
                         </View>
+                        <Image source={imagem} style={styles.imageItem}/>
+                    </View>
+                    <View>
+                        <Text style={styles.textoDescricao}>{itemDesc}</Text>
+                    </View>
+                    <View style={styles.rodape}>
+                        <Text style={styles.moeda}>{formataValor(preco)}</Text>
+                        <Botao titulo={"COMPRAR"} onPress={() => navigation.push('Checkout')}/>
                     </View>
                 </View>
             </View>
@@ -43,7 +53,8 @@ export const DescricaoItem = ({
 
 const styles = StyleSheet.create({
     itemContainer:{
-        flex:4
+        flex:4,
+        marginTop: -60,
     },
     itemPosicao:{
         justifyContent: 'center',
@@ -51,13 +62,13 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     item:{
-        backgroundColor:'#fff',
+        backgroundColor:WHITE,
         borderRadius:30,
         padding:28,
         width:'80%',
         elevation:4,
     },
-    textoPosicao:{
+    headerPosicao:{
         flexDirection:'row',
         justifyContent:'space-between',
     },
@@ -73,11 +84,30 @@ const styles = StyleSheet.create({
         marginBottom:4
     },
     textInferior:{
-        fontFamily:FONT_FAMILY_REGULAR,
+        fontFamily:FONT_FAMILY_BOLD,
         fontSize: FONT_SIZE_SMALL,
-        color: '#CACACA',
+        color: LIGHTERGRAY,
         marginBottom:12
-    }
-
-
+    },
+    imageItem:{
+        width:32,
+        height:72,
+    },
+    textoDescricao:{
+        fontFamily:FONT_FAMILY_REGULAR,
+        fontSize:FONT_SIZE_SMALL,
+        color: LIGHTGRAY
+    },
+    rodape:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        marginTop:16,
+    },
+    moeda:{
+        fontFamily: FONT_FAMILY_BOLD,
+        fontSize:FONT_SIZE_LARGE,
+        marginTop:10,
+        color:BLACK,
+    },
 });
