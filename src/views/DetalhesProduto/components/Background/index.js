@@ -1,5 +1,11 @@
 import React from 'react';
-import {Dimensions, ImageBackground, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {
+    Dimensions, 
+    ImageBackground, 
+    View, 
+    StyleSheet, 
+    Image,
+    TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Sacola } from '../../../../components/sacola';
 
