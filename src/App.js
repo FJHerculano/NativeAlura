@@ -7,6 +7,7 @@ import { COR_DE_FUNDO } from './styles/styles';
 import { DetalhesProduto } from './views/DetalhesProduto';
 import { Checkout } from './views/Checkout';
 import Provider from './provider';
+import { EscolheIdioma } from './views/EscolheIdioma';
 
 const Stack = createStackNavigator();
 
@@ -15,7 +16,12 @@ const App = () => {
         <NavigationContainer>
             <Provider>    
                 <SafeAreaView style={styles.container}>
-                    <Stack.Navigator initialRouteName="ListaProdutos">
+                    <Stack.Navigator initialRouteName="EscolheIdioma">
+                        <Stack.Screen
+                            name="EscolheIdioma"
+                            component={EscolheIdioma}
+                            options={{headerShown: false}}
+                        />
                         <Stack.Screen
                             name="ListaProdutos"
                             component={ListaProdutos}

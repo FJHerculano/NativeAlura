@@ -22,11 +22,13 @@ const styles = StyleSheet.create({
         backgroundColor:LIGHTBLUE,
         padding:20,
         borderRadius:6,
+        marginBottom:10,
     },
-    texto:{
+    botaoTexto:{
         fontFamily:FONT_FAMILY_SEMI_BOLD,
         fontSize:FONT_SIZE_MEDIUM,
         color:WHITE,
         textAlign:'center',
+        
     },
 });
